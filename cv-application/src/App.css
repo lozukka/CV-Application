@@ -13,6 +13,15 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+}
+input {
+  margin: 0.25rem;
+}
 dl {
   width: 50%;
   align-self: center;
