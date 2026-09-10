@@ -5,12 +5,20 @@ import CVPreview from "./components/Preview/CVPreview.jsx";
 import "./App.css";
 
 function App() {
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "First Name Last Name",
+    phoneNumber: "040-1234567",
+    email: "first.last@email.com",
+  });
   return (
     <>
-      <Header />
+      <header>
+        <Header />
+      </header>
+
       <main>
-        <CVForm />
-        <CVPreview />
+        <CVForm personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
+        <CVPreview personalInfo={personalInfo} />
       </main>
     </>
   );
