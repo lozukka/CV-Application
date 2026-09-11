@@ -9,6 +9,7 @@ function App() {
     name: "First Name Last Name",
     phoneNumber: "040-1234567",
     email: "first.last@email.com",
+    school: "",
   });
   return (
     <>

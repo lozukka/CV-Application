@@ -4,6 +4,7 @@ function CVForm({ personalInfo, setPersonalInfo }) {
       <div id="CVFormSection">
         <h2>Form renders here</h2>
         <form action="">
+          <legend>Personal Information</legend>
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -39,6 +40,22 @@ function CVForm({ personalInfo, setPersonalInfo }) {
                 setPersonalInfo({
                   ...personalInfo,
                   phoneNumber: event.target.value,
+                })
+              }
+            />
+          </div>
+          <legend>Education</legend>
+          <div>
+            <label htmlFor="schoolName">School:</label>
+            <input
+              type="text"
+              name="school"
+              id="school"
+              value={personalInfo.school}
+              onChange={(event) =>
+                setPersonalInfo({
+                  ...personalInfo,
+                  school: event.target.value,
                 })
               }
             />

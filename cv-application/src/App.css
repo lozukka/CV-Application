@@ -19,8 +19,12 @@ form {
   align-items: flex-start;
   align-self: center;
 }
+form div {
+  width: 100%;
+}
 input {
   margin: 0.25rem;
+  width: 100%;
 }
 dl {
   width: 50%;
