@@ -1,5 +1,6 @@
 import PersonalInfoForm from "./PersonalInfoForm";
 import EducationForm from "./EducationForm";
+import WorkExperienceForm from "./WorkExperienceForm";
 
 function CVForm({ personalInfo, setPersonalInfo }) {
   return (
@@ -14,6 +15,11 @@ function CVForm({ personalInfo, setPersonalInfo }) {
           />
           <legend>Education</legend>
           <EducationForm
+            personalInfo={personalInfo}
+            setPersonalInfo={setPersonalInfo}
+          />
+          <legend>Work Experience</legend>
+          <WorkExperienceForm
             personalInfo={personalInfo}
             setPersonalInfo={setPersonalInfo}
           />
