@@ -1,4 +1,5 @@
 import PersonalInfoForm from "./PersonalInfoForm";
+import EducationForm from "./EducationForm";
 
 function CVForm({ personalInfo, setPersonalInfo }) {
   return (
@@ -7,27 +8,15 @@ function CVForm({ personalInfo, setPersonalInfo }) {
         <h2>Form renders here</h2>
         <form action="">
           <legend>Personal Information</legend>
-
           <PersonalInfoForm
             personalInfo={personalInfo}
             setPersonalInfo={setPersonalInfo}
           />
           <legend>Education</legend>
-          <div>
-            <label htmlFor="schoolName">School:</label>
-            <input
-              type="text"
-              name="school"
-              id="school"
-              value={personalInfo.school}
-              onChange={(event) =>
-                setPersonalInfo({
-                  ...personalInfo,
-                  school: event.target.value,
-                })
-              }
-            />
-          </div>
+          <EducationForm
+            personalInfo={personalInfo}
+            setPersonalInfo={setPersonalInfo}
+          />
         </form>
       </div>
     </>
