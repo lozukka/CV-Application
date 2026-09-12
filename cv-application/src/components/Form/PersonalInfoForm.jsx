@@ -1,4 +1,8 @@
 function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setPersonalInfo({ ...personalInfo, [name]: value });
+  }
   return (
     <>
       <div>
@@ -8,9 +12,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           name="name"
           id="name"
           value={personalInfo.name}
-          onChange={(event) =>
-            setPersonalInfo({ ...personalInfo, name: event.target.value })
-          }
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -20,9 +22,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           name="email"
           id="email"
           value={personalInfo.email}
-          onChange={(event) =>
-            setPersonalInfo({ ...personalInfo, email: event.target.value })
-          }
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -32,12 +32,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           name="phoneNumber"
           id="phoneNumber"
           value={personalInfo.phoneNumber}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              phoneNumber: event.target.value,
-            })
-          }
+          onChange={handleChange}
         />
       </div>
     </>
