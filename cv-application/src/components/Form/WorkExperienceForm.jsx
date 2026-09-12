@@ -16,6 +16,21 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
           }
         />
       </div>
+      <div>
+        <label htmlFor="workPlace">Company:</label>
+        <input
+          type="text"
+          name="workPlace"
+          id="workPlace"
+          value={personalInfo.workPlace}
+          onChange={(event) =>
+            setPersonalInfo({
+              ...personalInfo,
+              workPlace: event.target.value,
+            })
+          }
+        />
+      </div>
     </>
   );
 }

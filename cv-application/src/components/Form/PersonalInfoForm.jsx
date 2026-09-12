@@ -29,8 +29,8 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
         <label htmlFor="phoneNumber">Phone Number:</label>
         <input
           type="tel"
-          name="tel"
-          id="tel"
+          name="phoneNumber"
+          id="phoneNumber"
           value={personalInfo.phoneNumber}
           onChange={(event) =>
             setPersonalInfo({

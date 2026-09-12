@@ -10,7 +10,13 @@ function App() {
     phoneNumber: "040-1234567",
     email: "first.last@email.com",
     school: "",
+    schoolTitle: "",
+    schoolDescription: "",
+    schoolYears: "",
     workTitle: "",
+    workPlace: "",
+    workDescription: "",
+    workYears: "",
   });
   return (
     <>
