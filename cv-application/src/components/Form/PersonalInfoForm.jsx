@@ -5,7 +5,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
   }
   return (
     <>
-      <div>
+      <div className="formInput">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -15,8 +15,9 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="email">Email:</label>
+
         <input
           type="email"
           name="email"
@@ -25,8 +26,9 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="phoneNumber">Phone Number:</label>
+
         <input
           type="tel"
           name="phoneNumber"
@@ -35,8 +37,9 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="about">About:</label>
+
         <textarea
           name="about"
           id="about"
