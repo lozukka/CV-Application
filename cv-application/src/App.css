@@ -129,4 +129,27 @@ dd {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--secont-text-color);
+  padding: 3rem;
+}
+#CV {
+  background-color: var(--main-bg-color);
+  box-shadow: 5px 5px 16px 0px rgba(135, 135, 135, 0.3);
+}
+#personalInformation {
+  background-color: var(--second-bg-color);
+  color: var(--secont-text-color);
+  padding: 4rem 3rem;
+}
+
+#personalInformation h3 {
+  font-size: 2rem;
+  margin-block: 0.5rem;
+}
+
+#personalInformation div {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-block: 1rem;
 }

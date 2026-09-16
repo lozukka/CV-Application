@@ -6,10 +6,11 @@ function CVPreview({ personalInfo, educationExperience, workExperience }) {
   return (
     <>
       <div id="CVPreviewSection">
-        <h2>CV renders here</h2>
-        <PersonalInfoPreview personalInfo={personalInfo} />
-        <EducationPreview educationExperience={educationExperience} />
-        <WorkExperiencePreview workExperience={workExperience} />
+        <div id="CV">
+          <PersonalInfoPreview personalInfo={personalInfo} />
+          <EducationPreview educationExperience={educationExperience} />
+          <WorkExperiencePreview workExperience={workExperience} />
+        </div>
       </div>
     </>
   );
