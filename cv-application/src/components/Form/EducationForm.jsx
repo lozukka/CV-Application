@@ -22,7 +22,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
   }
   return (
     <>
-      <div>
+      <div className="formInput">
         <label htmlFor="schoolExamination">Examination:</label>
         <input
           type="text"
@@ -32,7 +32,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="schoolName">Name of the School:</label>
         <input
           type="text"
@@ -42,7 +42,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="schoolYears">Years:</label>
         <input
           type="text"
@@ -52,9 +52,8 @@ function EducationForm({ educationExperience, setEducationExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="schoolDescription">Description:</label>
-        <br />
         <textarea
           name="schoolDescription"
           id="schoolDescription"

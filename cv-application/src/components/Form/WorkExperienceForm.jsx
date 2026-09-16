@@ -22,7 +22,7 @@ function WorkExperienceForm({ workExperience, setWorkExperience }) {
   }
   return (
     <>
-      <div>
+      <div className="formInput">
         <label htmlFor="workTitle">Title:</label>
         <input
           type="text"
@@ -32,7 +32,7 @@ function WorkExperienceForm({ workExperience, setWorkExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="workPlace">Company:</label>
         <input
           type="text"
@@ -42,7 +42,7 @@ function WorkExperienceForm({ workExperience, setWorkExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="workYears">Years:</label>
         <input
           type="text"
@@ -52,9 +52,8 @@ function WorkExperienceForm({ workExperience, setWorkExperience }) {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="formInput">
         <label htmlFor="workDescription">Description:</label>
-        <br />
         <textarea
           name="workDescription"
           id="workDescription"
