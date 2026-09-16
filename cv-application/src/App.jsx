@@ -9,18 +9,14 @@ function App() {
     name: "First Name Last Name",
     phoneNumber: "040-1234567",
     email: "first.last@email.com",
-    school: "",
-    schoolExamination: "",
-    schoolDescription: "",
-    schoolYears: "",
-    workTitle: "",
-    workPlace: "",
-    workDescription: "",
-    workYears: "",
   });
+  const [education, setEducation] = useState([]);
+  const [workExperience, setWorkExperience] = useState([]);
 
   function handleClearAll() {
     setPersonalInfo({ name: "", phoneNumber: "", email: "" });
+    setEducation([]);
+    setWorkExperience([]);
   }
 
   return (
@@ -33,9 +29,17 @@ function App() {
         <CVForm
           personalInfo={personalInfo}
           setPersonalInfo={setPersonalInfo}
+          education={education}
+          setEducation={setEducation}
+          workExperience={workExperience}
+          setWorkExperience={setWorkExperience}
           onClearAll={handleClearAll}
         />
-        <CVPreview personalInfo={personalInfo} />
+        <CVPreview
+          personalInfo={personalInfo}
+          education={education}
+          workExperience={workExperience}
+        />
       </main>
     </>
   );

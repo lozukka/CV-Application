@@ -1,4 +1,25 @@
-function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
+import { useState } from "react";
+
+function WorkExperienceForm({ workExperience, setWorkExperience }) {
+  const [work, setWork] = useState({
+    workTitle: "",
+    workPlace: "",
+    workYears: "",
+    workDescription: "",
+  });
+  function addNew() {
+    setWorkExperience([...workExperience, work]);
+    setWork({
+      workTitle: "",
+      workPlace: "",
+      workYears: "",
+      workDescription: "",
+    });
+  }
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setWork({ ...work, [name]: value });
+  }
   return (
     <>
       <div>
@@ -7,13 +28,8 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
           type="text"
           name="workTitle"
           id="workTitle"
-          value={personalInfo.workTitle}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              workTitle: event.target.value,
-            })
-          }
+          value={work.workTitle}
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -22,13 +38,8 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
           type="text"
           name="workPlace"
           id="workPlace"
-          value={personalInfo.workPlace}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              workPlace: event.target.value,
-            })
-          }
+          value={work.workPlace}
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -37,13 +48,8 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
           type="text"
           name="workYears"
           id="workYears"
-          value={personalInfo.workYears}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              workYears: event.target.value,
-            })
-          }
+          value={work.workYears}
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -52,15 +58,13 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
         <textarea
           name="workDescription"
           id="workDescription"
-          value={personalInfo.workDescription}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              workDescription: event.target.value,
-            })
-          }
+          value={work.workDescription}
+          onChange={handleChange}
           rows="5"
         ></textarea>
+        <button type="button" onClick={addNew}>
+          Add New
+        </button>
       </div>
     </>
   );

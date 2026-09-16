@@ -2,7 +2,15 @@ import PersonalInfoForm from "./PersonalInfoForm";
 import EducationForm from "./EducationForm";
 import WorkExperienceForm from "./WorkExperienceForm";
 
-function CVForm({ personalInfo, setPersonalInfo, onClearAll }) {
+function CVForm({
+  personalInfo,
+  setPersonalInfo,
+  education,
+  setEducation,
+  workExperience,
+  setWorkExperience,
+  onClearAll,
+}) {
   return (
     <>
       <div id="CVFormSection">
@@ -17,16 +25,13 @@ function CVForm({ personalInfo, setPersonalInfo, onClearAll }) {
           </fieldset>
           <fieldset>
             <legend>Education</legend>
-            <EducationForm
-              personalInfo={personalInfo}
-              setPersonalInfo={setPersonalInfo}
-            />
+            <EducationForm education={education} setEducation={setEducation} />
           </fieldset>
           <fieldset>
             <legend>Work Experience</legend>
             <WorkExperienceForm
-              personalInfo={personalInfo}
-              setPersonalInfo={setPersonalInfo}
+              workExperience={workExperience}
+              setWorkExperience={setWorkExperience}
             />
           </fieldset>
         </form>
