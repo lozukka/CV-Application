@@ -1,22 +1,15 @@
 import EducationPreview from "./EducationPreview";
+import WorkExperiencePreview from "./WorkExperiencePreview";
+import PersonalInfoPreview from "./PersonalInfoPreview";
 
 function CVPreview({ personalInfo }) {
   return (
     <>
       <div id="CVPreviewSection">
-        <h2>Preview of the CV</h2>
-        <div id="personalInformation">
-          <h3>Personal Information</h3>
-          <dl>
-            <dt>Name: </dt>
-            <dd>{personalInfo.name}</dd>
-            <dt>Email:</dt>
-            <dd>{personalInfo.email}</dd>
-            <dt>Phone Number:</dt>
-            <dd>{personalInfo.phoneNumber}</dd>
-          </dl>
-        </div>
+        <h2>CV renders here</h2>
+        <PersonalInfoPreview personalInfo={personalInfo} />
         <EducationPreview personalInfo={personalInfo} />
+        <WorkExperiencePreview personalInfo={personalInfo} />
       </div>
     </>
   );
