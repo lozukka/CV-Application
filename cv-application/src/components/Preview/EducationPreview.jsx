@@ -1,20 +1,20 @@
-function EducationPreview({ personalInfo }) {
+function EducationPreview({ educationExperience }) {
   return (
-    <>
-      <div id="educationInformation">
-        <h3>Education</h3>
-        <dl>
+    <div id="educationInformation">
+      <h3>Education</h3>
+      {educationExperience.map((education, index) => (
+        <dl key={index}>
           <dt>Name of the School:</dt>
-          <dd>{personalInfo.school}</dd>
+          <dd>{education.schoolName}</dd>
           <dt>Name of Examination:</dt>
-          <dd>{personalInfo.schoolExamination}</dd>
+          <dd>{education.schoolExamination}</dd>
           <dt>Years:</dt>
-          <dd>{personalInfo.schoolYears}</dd>
+          <dd>{education.schoolYears}</dd>
           <dt>Description:</dt>
-          <dd>{personalInfo.schoolDescription}</dd>
+          <dd>{education.schoolDescription}</dd>
         </dl>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
 
