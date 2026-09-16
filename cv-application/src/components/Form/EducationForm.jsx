@@ -26,8 +26,8 @@ function EducationForm({ educationExperience, setEducationExperience }) {
         <label htmlFor="schoolExamination">Examination:</label>
         <input
           type="text"
-          name="examination"
-          id="examination"
+          name="schoolExamination"
+          id="schoolExamination"
           value={education.schoolExamination}
           onChange={handleChange}
         />
