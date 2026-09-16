@@ -3,6 +3,9 @@ import EducationForm from "./EducationForm";
 import WorkExperienceForm from "./WorkExperienceForm";
 
 function CVForm({ personalInfo, setPersonalInfo }) {
+  function clearAll() {
+    console.log("this is working.. kindof");
+  }
   return (
     <>
       <div id="CVFormSection">
@@ -24,6 +27,7 @@ function CVForm({ personalInfo, setPersonalInfo }) {
             setPersonalInfo={setPersonalInfo}
           />
         </form>
+        <button onClick={clearAll}>Clear All</button>
       </div>
     </>
   );

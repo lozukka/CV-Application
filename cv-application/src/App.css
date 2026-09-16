@@ -19,6 +19,9 @@ form {
   align-items: flex-start;
   align-self: center;
 }
+button {
+  width: 250px;
+}
 form div {
   width: 100%;
 }
