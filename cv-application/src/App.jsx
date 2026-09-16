@@ -15,7 +15,7 @@ function App() {
   const [workExperience, setWorkExperience] = useState([]);
 
   function handleClearAll() {
-    setPersonalInfo({ name: "", phoneNumber: "", email: "" });
+    setPersonalInfo({ name: "", phoneNumber: "", email: "", about: "" });
     setEducationExperience([]);
     setWorkExperience([]);
   }
