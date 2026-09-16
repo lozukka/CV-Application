@@ -14,7 +14,7 @@ function CVForm({
   return (
     <>
       <div id="CVFormSection">
-        <h2>Form renders here</h2>
+        <h2>Add information here</h2>
         <form action="">
           <fieldset>
             <legend>Personal Information</legend>
