@@ -10,7 +10,7 @@ function App() {
     phoneNumber: "040-1234567",
     email: "first.last@email.com",
     school: "",
-    schoolTitle: "",
+    schoolExamination: "",
     schoolDescription: "",
     schoolYears: "",
     workTitle: "",
