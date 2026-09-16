@@ -2,7 +2,7 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
   return (
     <>
       <div>
-        <label htmlFor="workTitle">Work Title:</label>
+        <label htmlFor="workTitle">Title:</label>
         <input
           type="text"
           name="workTitle"
@@ -30,6 +30,37 @@ function WorkExperienceForm({ personalInfo, setPersonalInfo }) {
             })
           }
         />
+      </div>
+      <div>
+        <label htmlFor="workYears">Years:</label>
+        <input
+          type="text"
+          name="workYears"
+          id="workYears"
+          value={personalInfo.workYears}
+          onChange={(event) =>
+            setPersonalInfo({
+              ...personalInfo,
+              workYears: event.target.value,
+            })
+          }
+        />
+      </div>
+      <div>
+        <label htmlFor="workDescription">Description:</label>
+        <br />
+        <textarea
+          name="workDescription"
+          id="workDescription"
+          value={personalInfo.workDescription}
+          onChange={(event) =>
+            setPersonalInfo({
+              ...personalInfo,
+              workDescription: event.target.value,
+            })
+          }
+          rows="5"
+        ></textarea>
       </div>
     </>
   );
