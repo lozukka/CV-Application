@@ -26,6 +26,9 @@ input {
   margin: 0.25rem;
   width: 100%;
 }
+textarea {
+  width: 100%;
+}
 dl {
   width: 50%;
   align-self: center;

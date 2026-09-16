@@ -48,10 +48,10 @@ function EducationForm({ personalInfo, setPersonalInfo }) {
       </div>
       <div>
         <label htmlFor="schoolDescription">Description:</label>
-        <input
-          type="textarea"
-          name="Description"
-          id="Description"
+        <br />
+        <textarea
+          name="description"
+          id="description"
           value={personalInfo.schoolDescription}
           onChange={(event) =>
             setPersonalInfo({
@@ -59,7 +59,8 @@ function EducationForm({ personalInfo, setPersonalInfo }) {
               schoolDescription: event.target.value,
             })
           }
-        />
+          rows="5"
+        ></textarea>
       </div>
     </>
   );

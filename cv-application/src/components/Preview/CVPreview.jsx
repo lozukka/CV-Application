@@ -1,3 +1,5 @@
+import EducationPreview from "./EducationPreview";
+
 function CVPreview({ personalInfo }) {
   return (
     <>
@@ -14,13 +16,7 @@ function CVPreview({ personalInfo }) {
             <dd>{personalInfo.phoneNumber}</dd>
           </dl>
         </div>
-        <div id="educationInformation">
-          <h3>Education</h3>
-          <dl>
-            <dt>Name of school:</dt>
-            <dd>{personalInfo.school}</dd>
-          </dl>
-        </div>
+        <EducationPreview personalInfo={personalInfo} />
       </div>
     </>
   );
