@@ -1,18 +1,20 @@
-function WorkExperiencePreview({ personalInfo }) {
+function WorkExperiencePreview({ workExperience }) {
   return (
     <>
       <div id="workInformation">
         <h3>Work Experience</h3>
-        <dl>
-          <dt>Title:</dt>
-          <dd>{personalInfo.workTitle}</dd>
-          <dt>Name of the Company:</dt>
-          <dd>{personalInfo.workCompany}</dd>
-          <dt>Years:</dt>
-          <dd>{personalInfo.workYears}</dd>
-          <dt>Description:</dt>
-          <dd>{personalInfo.workDescription}</dd>
-        </dl>
+        {workExperience.map((work, index) => (
+          <dl key={index}>
+            <dt>Company:</dt>
+            <dd>{work.workPlace}</dd>
+            <dt>Title:</dt>
+            <dd>{work.workTitle}</dd>
+            <dt>Years:</dt>
+            <dd>{work.workYears}</dd>
+            <dt>Description:</dt>
+            <dd>{work.workDescription}</dd>
+          </dl>
+        ))}
       </div>
     </>
   );
