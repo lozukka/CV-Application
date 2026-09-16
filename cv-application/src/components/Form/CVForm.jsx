@@ -37,10 +37,10 @@ function CVForm({
               setWorkExperience={setWorkExperience}
             />
           </fieldset>
+          <button type="button" onClick={onClearAll} id="clearAllButton">
+            Clear All
+          </button>
         </form>
-        <button type="button" onClick={onClearAll}>
-          Clear All
-        </button>
       </div>
     </>
   );
