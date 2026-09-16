@@ -1,9 +1,37 @@
+:root {
+  --main-bg-color: #f0eeeb;
+  --main-text-color: #15072e;
+  --second-bg-color: #1b3142;
+  --secont-text-color: #fffdff;
+  --contrast-color: #f7a31c;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  padding: 2rem;
+}
 main {
   display: flex;
+  background-color: var(--main-bg-color);
   gap: 100px;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+}
+h1 {
+  color: var(--main-text-color);
+  margin-block: 0.7rem;
+  font-size: 3rem;
 }
 
 #CVPreviewSection,
