@@ -7,7 +7,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
     schoolYears: "",
     schoolDescription: "",
   });
-  function addNew() {
+  function addNewEducation() {
     setEducationExperience([...educationExperience, education]);
     setEducation({
       schoolExamination: "",
@@ -62,7 +62,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
           onChange={handleChange}
           rows="5"
         ></textarea>
-        <button type="button" onClick={addNew}>
+        <button type="button" onClick={addNewEducation}>
           Add New
         </button>
       </div>

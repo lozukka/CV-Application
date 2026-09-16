@@ -5,8 +5,8 @@ import WorkExperienceForm from "./WorkExperienceForm";
 function CVForm({
   personalInfo,
   setPersonalInfo,
-  education,
-  setEducation,
+  educationExperience,
+  setEducationExperience,
   workExperience,
   setWorkExperience,
   onClearAll,
@@ -25,7 +25,10 @@ function CVForm({
           </fieldset>
           <fieldset>
             <legend>Education</legend>
-            <EducationForm education={education} setEducation={setEducation} />
+            <EducationForm
+              educationExperience={educationExperience}
+              setEducationExperience={setEducationExperience}
+            />
           </fieldset>
           <fieldset>
             <legend>Work Experience</legend>
