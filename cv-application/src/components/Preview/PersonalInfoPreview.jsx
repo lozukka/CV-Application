@@ -10,6 +10,8 @@ function PersonalInfoPreview({ personalInfo }) {
           <dd>{personalInfo.email}</dd>
           <dt>Phone Number:</dt>
           <dd>{personalInfo.phoneNumber}</dd>
+          <dt>About:</dt>
+          <dd>{personalInfo.about}</dd>
         </dl>
       </div>
     </>

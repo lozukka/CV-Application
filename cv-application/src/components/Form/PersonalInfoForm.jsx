@@ -35,6 +35,16 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
       </div>
+      <div>
+        <label htmlFor="about">About:</label>
+        <textarea
+          name="about"
+          id="about"
+          value={personalInfo.about}
+          onChange={handleChange}
+          rows="5"
+        ></textarea>
+      </div>
     </>
   );
 }
