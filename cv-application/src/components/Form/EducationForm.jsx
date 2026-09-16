@@ -1,4 +1,25 @@
-function EducationForm({ personalInfo, setPersonalInfo }) {
+import { useState } from "react";
+
+function EducationForm({ educationExperience, setEducationExperience }) {
+  const [education, setEducation] = useState({
+    schoolExamination: "",
+    schoolName: "",
+    schoolYears: "",
+    schoolDescription: "",
+  });
+  function addNew() {
+    setEducationExperience([...educationExperience, education]);
+    setEducation({
+      schoolExamination: "",
+      schoolName: "",
+      schoolYears: "",
+      schoolDescription: "",
+    });
+  }
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setEducation({ ...education, [name]: value });
+  }
   return (
     <>
       <div>
@@ -7,60 +28,43 @@ function EducationForm({ personalInfo, setPersonalInfo }) {
           type="text"
           name="examination"
           id="examination"
-          value={personalInfo.schoolExamination}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              schoolExamination: event.target.value,
-            })
-          }
+          value={education.schoolExamination}
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="schoolName">Name of the School:</label>
         <input
           type="text"
-          name="school"
-          id="school"
-          value={personalInfo.school}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              school: event.target.value,
-            })
-          }
+          name="schoolName"
+          id="schoolName"
+          value={education.schoolName}
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="schoolYears">Years:</label>
         <input
           type="text"
-          name="years"
-          id="years"
-          value={personalInfo.schoolYears}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              schoolYears: event.target.value,
-            })
-          }
+          name="schoolYears"
+          id="schoolYears"
+          value={education.schoolYears}
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="schoolDescription">Description:</label>
         <br />
         <textarea
-          name="description"
-          id="description"
-          value={personalInfo.schoolDescription}
-          onChange={(event) =>
-            setPersonalInfo({
-              ...personalInfo,
-              schoolDescription: event.target.value,
-            })
-          }
+          name="schoolDescription"
+          id="schoolDescription"
+          value={education.schoolDescription}
+          onChange={handleChange}
           rows="5"
         ></textarea>
+        <button type="button" onClick={addNew}>
+          Add New
+        </button>
       </div>
     </>
   );

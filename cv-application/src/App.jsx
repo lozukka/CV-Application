@@ -10,12 +10,12 @@ function App() {
     phoneNumber: "040-1234567",
     email: "first.last@email.com",
   });
-  const [education, setEducation] = useState([]);
+  const [educationExperience, setEducationExperience] = useState([]);
   const [workExperience, setWorkExperience] = useState([]);
 
   function handleClearAll() {
     setPersonalInfo({ name: "", phoneNumber: "", email: "" });
-    setEducation([]);
+    setEducationExperience([]);
     setWorkExperience([]);
   }
 
@@ -29,15 +29,15 @@ function App() {
         <CVForm
           personalInfo={personalInfo}
           setPersonalInfo={setPersonalInfo}
-          education={education}
-          setEducation={setEducation}
+          educationExperience={educationExperience}
+          setEducationExperience={setEducationExperience}
           workExperience={workExperience}
           setWorkExperience={setWorkExperience}
           onClearAll={handleClearAll}
         />
         <CVPreview
           personalInfo={personalInfo}
-          education={education}
+          educationExperience={educationExperience}
           workExperience={workExperience}
         />
       </main>
