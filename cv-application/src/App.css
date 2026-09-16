@@ -153,3 +153,31 @@ dd {
   width: 40%;
   margin-block: 1rem;
 }
+
+#educationInformation {
+  padding: 4rem 3rem 2rem 3rem;
+}
+#workInformation {
+  padding: 0 3rem 2rem 3rem;
+}
+#educationInformation h3,
+#workInformation h3 {
+  font-size: 1.5rem;
+  margin-block: 0.4rem;
+  margin-bottom: 1rem;
+  color: var(--second-bg-color);
+  border-bottom: 3px solid var(--second-bg-color);
+}
+#educationInformation h4,
+#workInformation h4 {
+  color: var(--main-text-color);
+  margin-block: 0.3rem;
+}
+
+#educationInformation p,
+#workInformation p {
+  padding: 0.25rem 0;
+}
+#educationInformation div {
+  padding-bottom: 1rem;
+}

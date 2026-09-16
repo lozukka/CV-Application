@@ -3,16 +3,13 @@ function EducationPreview({ educationExperience }) {
     <div id="educationInformation">
       <h3>Education</h3>
       {educationExperience.map((education, index) => (
-        <dl key={index}>
-          <dt>Name of the School:</dt>
-          <dd>{education.schoolName}</dd>
-          <dt>Name of Examination:</dt>
-          <dd>{education.schoolExamination}</dd>
-          <dt>Years:</dt>
-          <dd>{education.schoolYears}</dd>
-          <dt>Description:</dt>
-          <dd>{education.schoolDescription}</dd>
-        </dl>
+        <div key={index}>
+          <h4>
+            {education.schoolExamination}, {education.schoolName}
+          </h4>
+          <p>{education.schoolYears}</p>
+          <p>{education.schoolDescription}</p>
+        </div>
       ))}
     </div>
   );
