@@ -22,6 +22,9 @@ form {
 button {
   width: 250px;
 }
+fieldset {
+  width: 100%;
+}
 form div {
   width: 100%;
 }

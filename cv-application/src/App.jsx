@@ -18,6 +18,11 @@ function App() {
     workDescription: "",
     workYears: "",
   });
+
+  function handleClearAll() {
+    setPersonalInfo({ name: "", phoneNumber: "", email: "" });
+  }
+
   return (
     <>
       <header>
@@ -25,7 +30,11 @@ function App() {
       </header>
 
       <main>
-        <CVForm personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
+        <CVForm
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
+          onClearAll={handleClearAll}
+        />
         <CVPreview personalInfo={personalInfo} />
       </main>
     </>
