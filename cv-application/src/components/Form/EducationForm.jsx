@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function EducationForm({ educationExperience, setEducationExperience }) {
   const [education, setEducation] = useState({
-    schoolExamination: "",
+    schoolDegree: "",
     schoolName: "",
     schoolYears: "",
     schoolDescription: "",
@@ -10,7 +10,7 @@ function EducationForm({ educationExperience, setEducationExperience }) {
   function addNewEducation() {
     setEducationExperience([...educationExperience, education]);
     setEducation({
-      schoolExamination: "",
+      schoolDegree: "",
       schoolName: "",
       schoolYears: "",
       schoolDescription: "",
@@ -23,12 +23,12 @@ function EducationForm({ educationExperience, setEducationExperience }) {
   return (
     <>
       <div className="formInput">
-        <label htmlFor="schoolExamination">Examination:</label>
+        <label htmlFor="schoolDegree">Degree:</label>
         <input
           type="text"
-          name="schoolExamination"
-          id="schoolExamination"
-          value={education.schoolExamination}
+          name="schoolDegree"
+          id="schoolDegree"
+          value={education.schoolDegree}
           onChange={handleChange}
         />
       </div>

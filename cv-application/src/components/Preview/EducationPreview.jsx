@@ -5,7 +5,7 @@ function EducationPreview({ educationExperience }) {
       {educationExperience.map((education, index) => (
         <div key={index}>
           <h4>
-            {education.schoolExamination}, {education.schoolName}
+            {education.schoolDegree}, {education.schoolName}
           </h4>
           <p>{education.schoolYears}</p>
           <p>{education.schoolDescription}</p>
